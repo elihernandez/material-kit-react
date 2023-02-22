@@ -1,5 +1,5 @@
-import { formatDistanceToNow, subHours } from 'date-fns';
-import { v4 as uuid } from 'uuid';
+import { formatDistanceToNow, subHours } from 'date-fns'
+import { v4 as uuid } from 'uuid'
 import {
   Box,
   Button,
@@ -11,9 +11,9 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText
-} from '@mui/material';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+} from '@mui/material'
+import ArrowRightIcon from '@mui/icons-material/ArrowRight'
+import MoreVertIcon from '@mui/icons-material/MoreVert'
 
 const products = [
   {
@@ -46,7 +46,7 @@ const products = [
     imageUrl: '/static/images/products/product_5.png',
     updatedAt: subHours(Date.now(), 9)
   }
-];
+]
 
 export const LatestProducts = (props) => (
   <Card {...props}>
@@ -102,4 +102,4 @@ export const LatestProducts = (props) => (
       </Button>
     </Box>
   </Card>
-);
+)

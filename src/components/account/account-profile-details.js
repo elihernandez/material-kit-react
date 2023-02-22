@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import {
   Box,
   Button,
@@ -8,7 +8,7 @@ import {
   Divider,
   Grid,
   TextField
-} from '@mui/material';
+} from '@mui/material'
 
 const states = [
   {
@@ -23,7 +23,7 @@ const states = [
     value: 'san-francisco',
     label: 'San Francisco'
   }
-];
+]
 
 export const AccountProfileDetails = (props) => {
   const [values, setValues] = useState({
@@ -33,14 +33,14 @@ export const AccountProfileDetails = (props) => {
     phone: '',
     state: 'Alabama',
     country: 'USA'
-  });
+  })
 
   const handleChange = (event) => {
     setValues({
       ...values,
       [event.target.name]: event.target.value
-    });
-  };
+    })
+  }
 
   return (
     <form
@@ -180,5 +180,5 @@ export const AccountProfileDetails = (props) => {
         </Box>
       </Card>
     </form>
-  );
-};
+  )
+}
