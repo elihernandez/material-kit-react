@@ -59,7 +59,7 @@ const Page = () => {
         setShorteners(response.data)
         setData({
             headers: [
-                { name: 'id' }, { name: 'nombre' }, { name: 'link' }
+                { name: 'id' }, { name: 'nombre' }, { name: 'link' }, { name: 'fecha' }
             ],
             data: response.data
         })
@@ -316,6 +316,9 @@ const TableData = ({ data, handleOpenModal, ...rest }) => {
                                     </TableCell>
                                     <TableCell style={{ width: 100 }} component="th" scope="row">
                                         {d.link}
+                                    </TableCell>
+                                    <TableCell style={{ width: 300 }} component="th" scope="row">
+                                        {new Date(d.createdAt).toLocaleDateString()}
                                     </TableCell>
                                     <TableCell style={{ width: 50 }} component="th" scope="row">
                                         <Stack direction="row">
