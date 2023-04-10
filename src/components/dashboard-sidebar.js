@@ -6,6 +6,8 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic'
 import LinkIcon from '@mui/icons-material/Link'
 import PeopleIcon from '@mui/icons-material/People'
 import RequestPageIcon from '@mui/icons-material/RequestPage'
+import CategoryIcon from '@mui/icons-material/Category'
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits'
 import { Box, Divider, Drawer, useMediaQuery } from '@mui/material'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
@@ -21,39 +23,49 @@ const items = [
         title: 'Dashboard'
     },
     {
-        href: '/descargas',
+        href: '/downloads',
         icon: (<CloudDownloadIcon fontSize="small" />),
-        title: 'Descargas'
+        title: 'Downloads'
     },
+    // {
+    //     href: '/enlaces',
+    //     icon: (<LinkIcon fontSize="small" />),
+    //     title: 'Enlaces'
+    // },
     {
-        href: '/enlaces',
-        icon: (<LinkIcon fontSize="small" />),
-        title: 'Enlaces'
-    },
-    {
-        href: '/solicitudes',
+        href: '/requests',
         icon: (<RequestPageIcon fontSize="small" />),
-        title: 'Solicitudes'
+        title: 'Requests'
     },
     {
-        href: '/suscriptores',
+        href: '/newsletterSubscribers',
         icon: (<PeopleIcon fontSize="small" />),
-        title: 'Suscriptores'
+        title: 'Newsletter'
     },
     {
-        href: '/secuencias',
+        href: '/multitracks',
         icon: (<LibraryMusicIcon fontSize="small" />),
-        title: 'Secuencias'
+        title: 'Multitracks'
     },
     {
-        href: '/plantillas',
+        href: '/templates',
         icon: (<DesignServicesIcon fontSize="small" />),
-        title: 'Plantillas'
+        title: 'Templates'
     },
     {
-        href: '/programas',
+        href: '/softwares',
         icon: (<AdbIcon fontSize="small" />),
-        title: 'Programas'
+        title: 'Softwares'
+    },
+    {
+        href: '/categories',
+        icon: (<CategoryIcon fontSize="small" />),
+        title: 'Categories'
+    },
+    {
+        href: '/products',
+        icon: (<ProductionQuantityLimitsIcon fontSize="small" />),
+        title: 'Products'
     }
 ]
 

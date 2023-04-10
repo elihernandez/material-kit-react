@@ -36,9 +36,9 @@ import { Search as SearchIcon } from 'src/icons/search'
 import { Upload as UploadIcon } from 'src/icons/upload'
 import { API_URL } from 'src/utils/constants'
 import { DashboardLayout } from '../components/dashboard-layout'
-import { ResourceDownload } from '../../../recursoiglesia/api/models/ResourceDownload'
+import { ResourceDownload } from '../../../recursoiglesia/api/models/Attempt'
 
-const Page = () => {
+const Page = (props) => {
     const [data, setData] = useState(null)
     const [openCreateModal, setOpenCreateModal] = useState<boolean>(false)
     const [openEditModal, setOpenEditModal] = useState<boolean>(false)
@@ -283,7 +283,6 @@ const TableData = ({ data, handleOpenModal, ...rest }) => {
     const handlePageChange = (event, newPage) => {
         setPage(newPage)
     }
-
 
     return (
         <Card {...rest}>
