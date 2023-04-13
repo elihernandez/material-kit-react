@@ -62,14 +62,14 @@ const Page = (props) => {
             field: 'isAvailable',
             headerName: 'Secuencia',
             width: 150,
-            renderCell: (params: GridRenderCellParams) => <Chip label={`${params.row.link === null ? 'Pendiente' : 'Disponible'}`} color={`${params.row.link === null ? 'warning' : 'primary'}`} />,
-            valueGetter: (params: GridValueGetterParams) => params.row.link === null ? 'pendiente' : 'disponible'
+            renderCell: (params: GridRenderCellParams) => <Chip label={`${params.row.link === null || params.row.link === '' ? 'Pendiente' : 'Disponible'}`} color={`${params.row.link === null || params.row.link === '' ? 'warning' : 'primary'}`} />,
+            valueGetter: (params: GridValueGetterParams) => params.row.link === null || params.row.link === '' ? 'pendiente' : 'disponible'
         },
         {
             field: 'urlDate',
             headerName: 'Fecha Url',
             width: 150,
-            valueGetter: (params: GridValueGetterParams) => params.row.urlDate != null ? getLocaleDateString(params.row.urlDate) : ''
+            valueGetter: (params: GridValueGetterParams) => params.row.urlDate != null || params.row.urlDate === '' ? getLocaleDateString(params.row.urlDate) : ''
         },
         {
             field: 'actions',
@@ -79,7 +79,7 @@ const Page = (props) => {
                 <IconButton aria-label="link" onClick={() => handleClick(params.row, MODAL_OPTIONS.LINK)}>
                     <LinkIcon />
                 </IconButton>
-                {params.row.link != null &&
+                {params.row.link != null || params.row.link === '' &&
                     <IconButton aria-label="delete_link" onClick={() => handleClick(params.row, MODAL_OPTIONS.DELETE_LINK)}>
                         <LinkOffIcon />
                     </IconButton>
